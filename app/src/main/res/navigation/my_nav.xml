@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ziko.dodopizza.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_pizzaFragment"
+            app:destination="@id/pizzaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.ziko.dodopizza.ui.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.ziko.dodopizza.ui.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/pizzaFragment"
+        android:name="com.ziko.dodopizza.ui.PizzaFragment"
+        android:label="fragment_pizza"
+        tools:layout="@layout/fragment_pizza" />
+    <fragment
+        android:id="@+id/dessertsFragment"
+        android:name="com.ziko.dodopizza.ui.DessertsFragment"
+        android:label="fragment_desserts"
+        tools:layout="@layout/fragment_desserts" />
+    <fragment
+        android:id="@+id/discountFragment"
+        android:name="com.ziko.dodopizza.ui.DiscountFragment"
+        android:label="fragment_discount"
+        tools:layout="@layout/fragment_discount" />
+    <fragment
+        android:id="@+id/drinksFragment"
+        android:name="com.ziko.dodopizza.ui.DrinksFragment"
+        android:label="fragment_drinks"
+        tools:layout="@layout/fragment_drinks" />
+    <fragment
+        android:id="@+id/sauceFragment"
+        android:name="com.ziko.dodopizza.ui.SauceFragment"
+        android:label="fragment_sauce"
+        tools:layout="@layout/fragment_sauce" />
+    <fragment
+        android:id="@+id/snacksFragment"
+        android:name="com.ziko.dodopizza.ui.SnacksFragment"
+        android:label="fragment_snacks"
+        tools:layout="@layout/fragment_snacks" />
+</navigation>
