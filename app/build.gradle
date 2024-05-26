@@ -7,12 +7,12 @@ android {
     namespace 'com.ziko.dodopizza'
     compileSdk 34
 
-    buildFeatures{
-        viewBinding = true
-    }
-
-
     defaultConfig {
+
+        buildFeatures{
+            viewBinding = true
+        }
+
         applicationId "com.ziko.dodopizza"
         minSdk 24
         targetSdk 34
@@ -23,6 +23,7 @@ android {
     }
 
     buildTypes {
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'

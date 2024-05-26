@@ -6,16 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.ziko.dodopizza.R
+import com.ziko.dodopizza.databinding.FragmentPersonalBinding
 
+class PersonalFragment : Fragment() {
 
-class DiscountFragment : Fragment() {
-
+    private lateinit var binding: FragmentPersonalBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_discount, container, false)
+        binding = FragmentPersonalBinding.inflate(layoutInflater)
+
+
+
+        return binding.root
+
     }
 
 

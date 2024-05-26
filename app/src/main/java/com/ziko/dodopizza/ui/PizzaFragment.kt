@@ -45,6 +45,4 @@ class PizzaFragment : Fragment() {
         list.add(Pizza(R.drawable.arriva,"Pizza5", "$5.096"))
     }
 
-
-
 }

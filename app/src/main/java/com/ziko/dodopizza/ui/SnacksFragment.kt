@@ -41,7 +41,7 @@ class SnacksFragment : Fragment() {
         list.add(Pizza(R.drawable.arriva,"Pizza2", "26.000"))
         list.add(Pizza(R.drawable.arriva,"Pizza3", "78.000"))
         list.add(Pizza(R.drawable.arriva,"Pizza4", "55.225"))
-        list.add(Pizza(R.drawable.arriva,"Pizza5", "$5.096"))
+        list.add(Pizza(R.drawable.arriva,"Pizza5", "5.096"))
     }
 
 

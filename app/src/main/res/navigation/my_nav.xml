@@ -54,4 +54,19 @@
         android:name="com.ziko.dodopizza.ui.SnacksFragment"
         android:label="fragment_snacks"
         tools:layout="@layout/fragment_snacks" />
+    <fragment
+        android:id="@+id/personalFragment"
+        android:name="com.ziko.dodopizza.ui.PersonalFragment"
+        android:label="fragment_personal"
+        tools:layout="@layout/fragment_personal" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.ziko.dodopizza.ui.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.ziko.dodopizza.ui.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
 </navigation>

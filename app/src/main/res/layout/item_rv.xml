@@ -43,21 +43,19 @@
             app:layout_constraintStart_toStartOf="@+id/cardView"
             app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
+
         <TextView
             android:id="@+id/pricePizza"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:text="25.000 сум"
-            android:layout_marginBottom="10dp"
+            android:layout_margin="20dp"
+            android:text="$5.55"
             android:textColor="@color/orange"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/namePizza" />
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

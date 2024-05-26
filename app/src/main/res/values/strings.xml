@@ -9,4 +9,6 @@
     <string name="drinks_text">Напитки</string>
     <string name="dessert_text">Десерты</string>
     <string name="sauce_text">Соусы</string>
+    <string name="profile">Профиль</string>
+    <string name="cart">Корзина</string>
 </resources>
