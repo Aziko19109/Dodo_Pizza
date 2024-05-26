@@ -3,6 +3,7 @@ package com.ziko.dodopizza.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import com.ziko.dodopizza.databinding.ItemRvBinding
 import com.ziko.dodopizza.model.Pizza
 
@@ -11,9 +12,11 @@ class NewsAdapter(val list: ArrayList<Pizza>) : RecyclerView.Adapter<NewsAdapter
     inner class Vh(var itemRvBinding: ItemRvBinding) : RecyclerView.ViewHolder(itemRvBinding.root) {
 
         fun onBind(pizza: Pizza, position: Int) {
-            itemRvBinding.imagePizza.setImageResource(pizza.image)
+            Picasso.get()
+                .load(pizza.image)
+                .into(itemRvBinding.imagePizza)
             itemRvBinding.namePizza.text = pizza.name
-            itemRvBinding.pricePizza.text = pizza.price
+            itemRvBinding.pricePizza.text = pizza.price.toString()
 
         }
     }

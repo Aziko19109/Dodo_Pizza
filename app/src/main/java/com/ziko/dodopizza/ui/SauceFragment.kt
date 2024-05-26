@@ -24,7 +24,6 @@ class SauceFragment : Fragment() {
     ): View? {
         binding = FragmentSauceBinding.inflate(layoutInflater)
 
-        loadData()
         newsAdapter = NewsAdapter(list)
         binding.rv.adapter = newsAdapter
 
@@ -36,14 +35,7 @@ class SauceFragment : Fragment() {
         return binding.root
     }
 
-    private fun loadData() {
-        list = ArrayList()
-        list.add(Pizza(R.drawable.arriva,"Pizza", "25.000"))
-        list.add(Pizza(R.drawable.arriva,"Pizza2", "26.000"))
-        list.add(Pizza(R.drawable.arriva,"Pizza3", "78.000"))
-        list.add(Pizza(R.drawable.arriva,"Pizza4", "55.225"))
-        list.add(Pizza(R.drawable.arriva,"Pizza5", "$5.096"))
-    }
+
 
 
 }

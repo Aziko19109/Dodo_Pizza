@@ -1,7 +1,7 @@
 package com.ziko.dodopizza.model
 
 data class Pizza(
-    var image:Int,
+    var image:String?=null,
     var name:String? = null,
-    var price:String? = null
+    var price:Int? = null
 )
