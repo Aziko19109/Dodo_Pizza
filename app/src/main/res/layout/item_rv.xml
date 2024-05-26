@@ -27,6 +27,7 @@
                 android:id="@+id/imagePizza"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:src="@drawable/arriva" />
 
         </androidx.cardview.widget.CardView>
@@ -43,7 +44,6 @@
             app:layout_constraintStart_toStartOf="@+id/cardView"
             app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
-
         <TextView
             android:id="@+id/pricePizza"
             android:layout_width="wrap_content"
@@ -56,7 +56,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/namePizza" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
