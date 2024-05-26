@@ -2,11 +2,11 @@
     <string name="app_name">Dodo Pizza</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="dodo_pizza">Dodo Pizza</string>
+    <string name="dodo_pizza">Додо Пицца</string>
     <string name="discount">Акции</string>
     <string name="pizza_text">Пицца</string>
     <string name="snacks_text">Закуски</string>
-    <string name="drink_text">Напитки</string>
-    <string name="dessert_text">Десерт</string>
+    <string name="drinks_text">Напитки</string>
+    <string name="dessert_text">Десерты</string>
     <string name="sauce_text">Соусы</string>
 </resources>

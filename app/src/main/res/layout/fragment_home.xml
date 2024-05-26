@@ -107,7 +107,7 @@
             android:layout_gravity="bottom"
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="@string/drink_text"
+            android:text="@string/drinks_text"
             android:textColor="@color/blue"
             android:textStyle="bold|italic"
             android:gravity="center"

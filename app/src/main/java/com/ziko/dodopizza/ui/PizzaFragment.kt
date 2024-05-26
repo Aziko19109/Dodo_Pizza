@@ -38,10 +38,10 @@ class PizzaFragment : Fragment() {
 
     private fun loadData() {
         list = ArrayList()
-        list.add(Pizza(R.drawable.arriva,"Pizza", "$5.66"))
-        list.add(Pizza(R.drawable.arriva,"Pizza2", "$5.66"))
-        list.add(Pizza(R.drawable.arriva,"Pizza3", "$5.24"))
-        list.add(Pizza(R.drawable.arriva,"Pizza4", "$5.16"))
+        list.add(Pizza(R.drawable.arriva,"Pizza", "25.000"))
+        list.add(Pizza(R.drawable.arriva,"Pizza2", "26.000"))
+        list.add(Pizza(R.drawable.arriva,"Pizza3", "78.000"))
+        list.add(Pizza(R.drawable.arriva,"Pizza4", "55.225"))
         list.add(Pizza(R.drawable.arriva,"Pizza5", "$5.096"))
     }
 

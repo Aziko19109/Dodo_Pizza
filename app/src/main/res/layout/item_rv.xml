@@ -43,56 +43,22 @@
             app:layout_constraintStart_toStartOf="@+id/cardView"
             app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
-        <RadioGroup
-            android:id="@+id/radioGroup"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:gravity="center"
-            app:layout_constraintEnd_toEndOf="@+id/namePizza"
-            app:layout_constraintStart_toStartOf="@+id/namePizza"
-            app:layout_constraintTop_toBottomOf="@+id/namePizza">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-
-
-        </RadioGroup>
-
         <TextView
             android:id="@+id/pricePizza"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:text="$5.55"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:text="25.000 сум"
+            android:layout_marginBottom="10dp"
             android:textColor="@color/orange"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+            app:layout_constraintTop_toBottomOf="@+id/namePizza" />
 
-        <ImageView
-            android:id="@+id/newsDesc"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_margin="20dp"
-            android:src="@drawable/ic_add"
-            app:layout_constraintBottom_toBottomOf="@+id/pricePizza"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/pricePizza"
-            app:tint="@color/orange" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
