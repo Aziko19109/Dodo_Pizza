@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.ziko.dodopizza.R
 import com.ziko.dodopizza.databinding.FragmentProfileBinding
 
@@ -21,10 +22,11 @@ class ProfileFragment : Fragment() {
         binding.apply {
 
             historyLiner.setOnClickListener {
-
+                findNavController().navigate(R.id.historyFragment)
             }
 
             lichnieLiner.setOnClickListener {
+                findNavController().navigate(R.id.historyFragment)
 
             }
 
