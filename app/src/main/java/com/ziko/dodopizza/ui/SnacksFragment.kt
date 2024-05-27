@@ -41,6 +41,7 @@ class SnacksFragment : Fragment() {
         binding.rv.adapter = newsAdapter
         binding.backFromPizzaFragment.setOnClickListener(){
             findNavController().popBackStack()
+
         }
 
         return binding.root
