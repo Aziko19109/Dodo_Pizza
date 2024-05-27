@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1098596184495",
+    "project_id": "dodo-pizza-665e0",
+    "storage_bucket": "dodo-pizza-665e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098596184495:android:756491a19a488a74717f5a",
+        "android_client_info": {
+          "package_name": "com.ziko.dodopizza"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-mWVMeMWVcEGO2BQqmGKrk8WZD1onMgk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
