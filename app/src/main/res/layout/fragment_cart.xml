@@ -23,7 +23,7 @@
             android:fontFamily="serif"
             android:text="@string/cart"
             android:textColor="@color/white"
-            android:textSize="24sp"
+            android:textSize="40sp"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="155dp"
             tools:layout_editor_absoluteY="18dp" />
@@ -63,7 +63,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
+            android:fontFamily="serif"
             android:text="Заказать"
+            android:textStyle="bold"
             android:textColor="@color/white"
             android:textSize="24sp" />
 

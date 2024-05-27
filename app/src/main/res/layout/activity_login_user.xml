@@ -23,35 +23,25 @@
         android:fontFamily="serif"
         android:text="@string/dodo_pizza"
         android:textSize="40sp"
+        android:textStyle="bold"
         android:textColor="@color/orange"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="serif"
-        android:text="Deliver Favorite Food"
-        android:textColor="@color/orange"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="serif"
-        android:text="Login To Your  Account"
+        android:text="Войдите в свой аккаунт"
         android:textColor="@color/orange"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
         android:id="@+id/nameEditText"
@@ -104,6 +94,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:backgroundTint="@android:color/transparent"
+            android:fontFamily="serif"
             android:hint="XX XXX XX XX"
             android:inputType="number"
             android:paddingStart="5dp"
@@ -122,7 +113,8 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/button_bg"
         android:fontFamily="serif"
-        android:text="Login"
+        android:text="Войти"
+        android:textStyle="bold"
         android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
