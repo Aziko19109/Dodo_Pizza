@@ -11,10 +11,8 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.google.firebase.database.getValue
-import com.ziko.dodopizza.R
+import com.google.firebase.database.ktx.getValue
 import com.ziko.dodopizza.adapter.NewsAdapter
-import com.ziko.dodopizza.databinding.FragmentHomeBinding
 import com.ziko.dodopizza.databinding.FragmentPizzaBinding
 import com.ziko.dodopizza.model.Pizza
 
@@ -47,7 +45,7 @@ class PizzaFragment : Fragment() {
 
     fun takeLastId() {
 
-        reference = firebaseDatabase.getReference("napitki")
+        reference = firebaseDatabase.getReference("pizza")
 
         reference.orderByKey().limitToLast(1)
             .addListenerForSingleValueEvent(object : ValueEventListener {
@@ -71,7 +69,7 @@ class PizzaFragment : Fragment() {
     fun loadData() {
 
         for (i in 1..lastId) {
-            reference = firebaseDatabase.getReference("napitki/$i")
+            reference = firebaseDatabase.getReference("pizza/$i")
             reference.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
 
