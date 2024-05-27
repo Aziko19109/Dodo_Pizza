@@ -9,10 +9,12 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Toast
 import com.ziko.dodopizza.databinding.ActivityLoginUserBinding
+import com.ziko.dodopizza.db.SessionManager
 
 class LoginUserActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginUserBinding
+    private lateinit var sessionManager: SessionManager
 
     var phoneNumber = ""
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,10 +23,7 @@ class LoginUserActivity : AppCompatActivity() {
         setContentView(binding.root)
         numberFormat()
 
-
-        val sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-
+        sessionManager = SessionManager(this)
 
         binding.apply {
             loginButton.setOnClickListener {
@@ -33,10 +32,9 @@ class LoginUserActivity : AppCompatActivity() {
                 val phone = phoneNumberEditText.text.toString()
 
                 if(name.isNotEmpty() && phone.isNotEmpty()){
-                    editor.putString("USER_NAME", name)
-                    editor.putString("USER_PHONE", phone)
-                    editor.putBoolean("IS_FIRST_TIME", false)
-                    editor.apply()
+                    sessionManager.name = name
+                    sessionManager.phone = phone
+                    sessionManager.isRegistered = true
                     startActivity(Intent(this@LoginUserActivity, MainActivity::class.java))
                     Toast.makeText(this@LoginUserActivity, "saved", Toast.LENGTH_SHORT).show()
                 }

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -17,6 +18,7 @@ import com.ziko.dodopizza.adapter.NewsAdapter
 import com.ziko.dodopizza.databinding.FragmentDessertsBinding
 import com.ziko.dodopizza.databinding.FragmentDrinksBinding
 import com.ziko.dodopizza.databinding.FragmentSauceBinding
+import com.ziko.dodopizza.model.CartItem
 import com.ziko.dodopizza.model.Pizza
 
 
@@ -36,7 +38,9 @@ class SauceFragment : Fragment() {
         firebaseDatabase = FirebaseDatabase.getInstance()
         list = ArrayList()
         takeLastId()
-        newsAdapter = NewsAdapter(list)
+        newsAdapter = NewsAdapter(list) { pizza ->
+            addToCart(pizza)
+        }
         binding.rv.adapter = newsAdapter
         binding.backFromPizzaFragment.setOnClickListener(){
             findNavController().popBackStack()
@@ -44,6 +48,18 @@ class SauceFragment : Fragment() {
 
 
         return binding.root
+    }
+
+    private fun addToCart(pizza: Pizza) {
+        val cartRef = firebaseDatabase.getReference("cart/user1")
+        val cartItem = CartItem(pizza.image!!, pizza.name!!, pizza.price.toString(), 1)
+        cartRef.child(pizza.name!!).setValue(cartItem)
+            .addOnSuccessListener {
+                Toast.makeText(requireContext(), "add to cart", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener {
+                // Обработка ошибок добавления
+            }
     }
 
     fun takeLastId() {

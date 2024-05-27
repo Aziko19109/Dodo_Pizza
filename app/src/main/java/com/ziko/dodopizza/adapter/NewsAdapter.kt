@@ -6,8 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import com.ziko.dodopizza.databinding.ItemRvBinding
 import com.ziko.dodopizza.model.Pizza
+import com.ziko.dodopizza.model.PopularModel
 
-class NewsAdapter(val list: ArrayList<Pizza>) : RecyclerView.Adapter<NewsAdapter.Vh>() {
+class NewsAdapter(val list: ArrayList<Pizza>,  private val addToCart: (Pizza) -> Unit) : RecyclerView.Adapter<NewsAdapter.Vh>() {
 
     inner class Vh(var itemRvBinding: ItemRvBinding) : RecyclerView.ViewHolder(itemRvBinding.root) {
 
@@ -17,6 +18,10 @@ class NewsAdapter(val list: ArrayList<Pizza>) : RecyclerView.Adapter<NewsAdapter
                 .into(itemRvBinding.imagePizza)
             itemRvBinding.namePizza.text = pizza.name
             itemRvBinding.pricePizza.text = pizza.price.toString()
+
+            itemRvBinding.addBtn.setOnClickListener {
+                addToCart(pizza)
+            }
 
         }
     }

@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="180dp"
+    android:layout_width="170dp"
     android:layout_height="wrap_content"
     app:cardCornerRadius="20dp"
     android:layout_margin="20dp"
@@ -56,6 +56,29 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/namePizza" />
+
+        <TextView
+            android:id="@+id/summ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" сум"
+            android:textColor="@color/orange"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/pricePizza"
+            app:layout_constraintStart_toEndOf="@+id/pricePizza"
+            app:layout_constraintTop_toTopOf="@+id/pricePizza" />
+
+        <ImageView
+            android:id="@+id/addBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_cart_bg"
+            android:src="@drawable/baseline_add"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
