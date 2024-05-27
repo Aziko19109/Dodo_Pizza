@@ -1,6 +1,7 @@
 package com.ziko.dodopizza
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,9 +20,23 @@ class LoginUserActivity : AppCompatActivity() {
         binding = ActivityLoginUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
         numberFormat()
+
+
+        val sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+
+
         binding.apply {
             loginButton.setOnClickListener {
-                if(nameEditText.text.toString().isNotEmpty() && phoneNumberEditText.text.toString().isNotEmpty()){
+
+                val name = nameEditText.text.toString()
+                val phone = phoneNumberEditText.text.toString()
+
+                if(name.isNotEmpty() && phone.isNotEmpty()){
+                    editor.putString("USER_NAME", name)
+                    editor.putString("USER_PHONE", phone)
+                    editor.putBoolean("IS_FIRST_TIME", false)
+                    editor.apply()
                     startActivity(Intent(this@LoginUserActivity, MainActivity::class.java))
                     Toast.makeText(this@LoginUserActivity, "saved", Toast.LENGTH_SHORT).show()
                 }

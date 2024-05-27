@@ -47,7 +47,7 @@ class DrinksFragment : Fragment() {
     }
     fun takeLastId() {
 
-        reference = firebaseDatabase.getReference("napitki")
+        reference = firebaseDatabase.getReference("Drinks")
 
         reference.orderByKey().limitToLast(1)
             .addListenerForSingleValueEvent(object : ValueEventListener {
@@ -71,7 +71,7 @@ class DrinksFragment : Fragment() {
     fun loadData() {
 
         for (i in 1..lastId) {
-            reference = firebaseDatabase.getReference("napitki/$i")
+            reference = firebaseDatabase.getReference("Drinks/$i")
             reference.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
 
