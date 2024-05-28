@@ -67,9 +67,9 @@ class CartFragment : Fragment() {
                 }
                 adapter.notifyDataSetChanged()
                 calculateTotalPrice()
-                if (binding.totalPrice.text == "0,00"){
+                if (binding.totalPrice.text == "0,00") {
                     binding.totalPrice.visibility = View.GONE
-                }else{
+                } else {
                     binding.totalPrice.visibility = View.VISIBLE
 
                 }
@@ -86,9 +86,9 @@ class CartFragment : Fragment() {
         cartRef.child(cartItem.foodName).setValue(cartItem)
             .addOnSuccessListener {
                 calculateTotalPrice()
-                if (binding.totalPrice.text == "0,00"){
+                if (binding.totalPrice.text == "0,00") {
                     binding.totalPrice.visibility = View.GONE
-                }else{
+                } else {
                     binding.totalPrice.visibility = View.VISIBLE
 
                 }
@@ -97,15 +97,16 @@ class CartFragment : Fragment() {
                 // Обработка ошибок обновления
             }
     }
+
     private fun deleteFromCart(cartItem: CartItem) {
         val cartRef = firebaseDatabase.getReference("cart/user1")
         cartRef.child(cartItem.foodName).removeValue()
             .addOnSuccessListener {
                 adapter.removeItem(cartItem)
                 calculateTotalPrice()
-                if (binding.totalPrice.text == "0,00"){
+                if (binding.totalPrice.text == "0,00") {
                     binding.totalPrice.visibility = View.GONE
-                }else{
+                } else {
                     binding.totalPrice.visibility = View.VISIBLE
 
                 }
@@ -115,6 +116,8 @@ class CartFragment : Fragment() {
                 // Обработка ошибок удаления
             }
     }
+
+
 
     private fun calculateTotalPrice() {
 

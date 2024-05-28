@@ -35,9 +35,7 @@ class HomeFragment : Fragment() {
         binding.sauceButton.setOnClickListener {
             findNavController().navigate(R.id.sauceFragment)
         }
-        binding.discountButton.setOnClickListener {
-            findNavController().navigate(R.id.discountFragment)
-        }
+
 
         return binding.root
     }

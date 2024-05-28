@@ -46,9 +46,8 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:scaleType="centerCrop"
-            android:src="@drawable/oder_fod"
-
-            />
+            android:text="@string/discount"
+            android:src="@drawable/oder_fod" />
 
     </androidx.cardview.widget.CardView>
 
@@ -61,17 +60,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:layout_weight="1"
-            android:layout_margin="10dp"
             android:src="@drawable/img_for_pizzabutton" />
 
         <TextView
@@ -85,7 +78,6 @@
             android:textColor="@color/blue"
             android:textStyle="bold|italic" />
 
-        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
