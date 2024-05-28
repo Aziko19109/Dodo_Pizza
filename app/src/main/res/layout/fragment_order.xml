@@ -70,7 +70,8 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:paddingStart="10dp"
-                android:text="SAMASMDMSADMSAMDMSAD"
+                android:text="Имя"
+                android:fontFamily="serif"
                 android:textSize="20sp" />
 
         </LinearLayout>
@@ -96,9 +97,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-
+                android:fontFamily="serif"
                 android:paddingStart="10dp"
-                android:text="SAMASMDMSADMSAMDMSAD"
+                android:text="Номер телефона"
                 android:textSize="20sp" />
 
         </LinearLayout>
@@ -119,12 +120,13 @@
                 app:tint="@color/orange" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="" />
+                android:fontFamily="serif"
+                android:hint="Пример: город Фергана, улица Мотурудий 28/84" />
 
         </LinearLayout>
 
@@ -150,7 +152,8 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:paddingStart="10dp"
-                android:text="SAMASMDMSADMSAMDMSAD"
+                android:fontFamily="serif"
+                android:text="Итоговая сумма"
                 android:textSize="20sp" />
 
         </LinearLayout>
@@ -165,6 +168,7 @@
         android:layout_margin="32dp"
         android:padding="10dp"
         android:gravity="center"
+        android:fontFamily="serif"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
