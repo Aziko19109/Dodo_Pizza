@@ -24,7 +24,6 @@ import com.ziko.dodopizza.model.PopularModel
 
 class CartFragment : Fragment() {
 
-
     private lateinit var binding: FragmentCartBinding
     private lateinit var firebaseDatabase: FirebaseDatabase
     private lateinit var reference: DatabaseReference

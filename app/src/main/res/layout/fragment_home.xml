@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -36,23 +35,19 @@
         android:layout_width="360dp"
         android:layout_height="100dp"
         app:cardCornerRadius="15dp"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dessertsButton">
 
-        <TextView
-            android:background="@color/orange"
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="@string/discount"
-            android:textSize="50sp"
-            android:textColor="@color/white"
-            android:textStyle="bold|italic"
-            android:fontFamily="serif"
+            android:scaleType="centerCrop"
+            android:src="@drawable/oder_fod"
+
             />
 
     </androidx.cardview.widget.CardView>
@@ -66,10 +61,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
             android:src="@drawable/img_for_pizzabutton" />
 
         <TextView
@@ -82,6 +84,8 @@
             android:text="@string/pizza_text"
             android:textColor="@color/blue"
             android:textStyle="bold|italic" />
+
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
