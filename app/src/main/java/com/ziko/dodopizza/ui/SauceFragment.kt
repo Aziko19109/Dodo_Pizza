@@ -55,7 +55,7 @@ class SauceFragment : Fragment() {
         val cartItem = CartItem(pizza.image!!, pizza.name!!, pizza.price.toString(), 1)
         cartRef.child(pizza.name!!).setValue(cartItem)
             .addOnSuccessListener {
-                Toast.makeText(requireContext(), "add to cart", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Добавлено в корзину", Toast.LENGTH_SHORT).show()
             }
             .addOnFailureListener {
                 // Обработка ошибок добавления

@@ -36,7 +36,7 @@ class LoginUserActivity : AppCompatActivity() {
                     sessionManager.phone = phone
                     sessionManager.isRegistered = true
                     startActivity(Intent(this@LoginUserActivity, MainActivity::class.java))
-                    Toast.makeText(this@LoginUserActivity, "saved", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@LoginUserActivity, "Сохранено", Toast.LENGTH_SHORT).show()
                 }
             }
         }

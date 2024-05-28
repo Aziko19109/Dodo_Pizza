@@ -35,7 +35,7 @@ class OrderFragment : Fragment() {
         }
 
         binding.applyBtn.setOnClickListener {
-            Toast.makeText(context, "Ваш заказ подтвержден!!!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Ваш заказ принят!!!", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.homeFragment)
         }
 
